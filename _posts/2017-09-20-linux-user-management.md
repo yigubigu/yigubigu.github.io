@@ -136,9 +136,11 @@ vagrant@vagrant-ubuntu-trusty-64:~$
 * bashrc：每次加载bash执行（包含登录）
 * bash_logout：用户每次退出登录执行
 
-# 3 组帐号管理
-#3.1 组帐号文件
-#3.1.1 /etc/group：保存组帐号名称、GID、组成员等
+#3 组帐号管理
+
+##3.1 组帐号文件
+
+###3.1.1 /etc/group：保存组帐号名称、GID、组成员等
 
 ````
 vagrant@vagrant-ubuntu-trusty-64:~$ sudo tail  /etc/group
@@ -168,6 +170,7 @@ vagrant@vagrant-ubuntu-trusty-64:~$
 ````
 
 #3.2 命令
+
 #3.2.1 groupadd 添加一个组帐号
 
 
