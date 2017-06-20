@@ -26,7 +26,8 @@ GID：组标识号
 
 # 2 用户帐号
 
-## 2.1 /etc/passwd：保存用户名称、用户家目录、登录shell，使用“：”分隔配置字段，所有用户可以访问，只有root可以修改。
+## 2.1 /etc/passwd
+保存用户名称、用户家目录、登录shell，使用“：”分隔配置字段，所有用户可以访问，只有root可以修改。
 
 ````
 vagrant@vagrant-ubuntu-trusty-64:~$ head /etc/passwd         //查看文件的前面10行内容
@@ -53,7 +54,8 @@ vagrant@vagrant-ubuntu-trusty-64:~$
 * 第六字段：家目录
 * 第七字段：登录shell
 
-## 2.2 /etc/shadow：密码，帐号有效期，只用root可以读取信息，不许直接修改。
+## 2.2 /etc/shadow
+密码，帐号有效期，只用root可以读取信息，不许直接修改。
 
 ````
 vagrant@vagrant-ubuntu-trusty-64:~$ sudo head /etc/shadow
@@ -166,6 +168,25 @@ vagrant@vagrant-ubuntu-trusty-64:~$
 ````
 
 #3.2 命令
-#3.2.1 groupadd
-#3.2.2 groupwd 
+#3.2.1 groupadd 添加一个组帐号
+
+
+#3.2.2 groupwd 设置组帐号密码
+
+
+#3.2.3 groups 查看用户属于哪个组
+
+groups   用户名
+
+#3.3.3 who,w 查看当前登录到本机的用户帐号详细信息
+````
+who 
+w
+````
+
+#3.3.4 users 查看用户帐号详细信息
+
+
+
+
 
