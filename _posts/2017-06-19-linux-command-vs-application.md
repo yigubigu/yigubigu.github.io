@@ -1,7 +1,7 @@
 ---
 date: 2017-06-19 09:50:47+00:00
 layout: post
-title: 'Linux'
+title: 'Linux 应用程序与命令'
 categories: 文档
 tags:  Linux
 ---
