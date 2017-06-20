@@ -1,7 +1,7 @@
 ---
 date: 2017-06-19 09:50:47+00:00
 layout: post
-title: 'Linux manage process'
+title: 'Linux 计划任务'
 categories: 文档
 tags:  Linux
 ---
@@ -23,14 +23,14 @@ tags:  Linux
 例如：一个大型数据库，要在别人不用系统时去处理数据，比如凌晨1点30分。那么该先建立/home/liu/db_job.sh脚本管理数据库，计划处理/home/liu/db_job.sh文件中的结果。正常方式是这样启动下列命令:
 
 ````
-liu@liu:~$ at 1:30 tomorrow
+vagrant@vagrant-ubuntu-trusty-64:~$ at 1:30 tomorrow
 at>/home/liu/db_job.sh            //编写命令
 at><EOT>                          //按Ctrl+D结束编辑
-liu@liu:~$ atq                      //查看任务
+vagrant@vagrant-ubuntu-trusty-64:~$ atq                      //查看任务
 1        Mon Jul 25 01:30:00 2016 a liu  //前面的数字“1”代表任务编号
-liu@liu:~$ atrm 1                   //删除任务
-liu@liu:~$ atq                      //查看任务
-liu@liu:~$ 
+vagrant@vagrant-ubuntu-trusty-64:~$ atrm 1                   //删除任务
+vagrant@vagrant-ubuntu-trusty-64:~$ atq                      //查看任务
+vagrant@vagrant-ubuntu-trusty-64:~$ 
 ````
 AT Time中的时间表示方法示例：
 ![](../assets/linux-at.png)
@@ -100,5 +100,5 @@ Choose 1-3 [2]: 3                           //选择一个编辑工具
 */1 *  *   *   *     who -all >> /home/vagrant/per_min.txt
 //保存退出
 crontab: installing new crontab             //添加完成
-liu@liu:~$cat /home/liu/per_min.txt         //查看到每分钟用户的登陆信息
+vagrant@vagrant-ubuntu-trusty-64:~$cat /home/liu/per_min.txt         //查看到每分钟用户的登陆信息
 ````
