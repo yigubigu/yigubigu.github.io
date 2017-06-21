@@ -10,7 +10,7 @@ tags:  Linux
 
 现在，让我们自己动手操作，查看一下 firefox 这个应用的组成。
 
-在终端执行如下指令  “liu@liu:~$  dpkg -L firefox ” 。
+在终端执行如下指令  “vagrant@vagrant-ubuntu-trusty-64:~$  dpkg -L firefox ” 。
 
 会出现下面的显示信息：
 
