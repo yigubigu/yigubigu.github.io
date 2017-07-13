@@ -1,4 +1,10 @@
-
+---
+date: 2017-07-12 09:50:47+00:00
+layout: post
+title: 'Mysql Help'
+categories: 文档
+tags:  'Mysql'
+---
 
 #1 Security
 ##1.1 Set Password
