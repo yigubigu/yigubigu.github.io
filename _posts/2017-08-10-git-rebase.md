@@ -13,4 +13,4 @@ git pull --base 而不是git pull。
 注意，如果有冲突，会导致当前的代码留在某一个commit，需要手工解决冲突，然后commit。 
 
 
-
+[git rebase](http://kernowsoul.com/blog/2012/06/20/4-ways-to-avoid-merge-commits-in-git/)
