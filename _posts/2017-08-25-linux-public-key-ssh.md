@@ -39,3 +39,19 @@ PasswordAuthentication no
 #5 Restart SSH
 sudo service ssh restart 
 
+#6 修改ssh登录端口
+ vi /etc/ssh/sshd_config
+ 
+ ````
+ #Port 22
+#修改为：
+Port 60022 #这里修改为你想要设置的端口,以60022为例
+ ````
+
+#7 修改防火墙配置
+vi /etc/sysconfig/iptabels
+
+```
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 60022 -j ACCEPT
+```
+sduo service iptables restart
