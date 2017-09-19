@@ -1,4 +1,3 @@
-
 ---
 date: 2017-08-25 09:50:47+00:00
 layout: post
@@ -20,10 +19,23 @@ ssh-keygen -t rsa
 
 cat id_rsa.pub >> ~/.ssh/authorized_keys
 
-#3 检测ssh设置
+#3 Nnable public key login
 
 需要检查sshd服务的Pubkey认证功能是否默认打开
 /etc/ssh/sshd_config
 
+```
 PubkeyAuthentication yes           
+```
+
+#4 Disable password login
+
+```
+PasswordAuthentication no
+```
+
 如果修改后记的要重起你的ssh服务,用ssh –v来显示详细的登陆过程.
+
+#5 Restart SSH
+sudo service ssh restart 
+
