@@ -82,16 +82,12 @@ vagrant@vagrant-ubuntu-trusty-64:~$
 ## 2.3 命令
 ### 2.3.1 useradd
 ````
-vagrant@vagrant-ubuntu-trusty-64:~$ sudo useradd test_usr     //添加用户test_usr
-vagrant@vagrant-ubuntu-trusty-64:~$ tail -1 /etc/passwd       //查看文件最后一行
-test_usr:x:1001:1001::/home/test_usr:/bin/sh
-vagrant@vagrant-ubuntu-trusty-64:~$ sudo tail -1 /etc/shadow
-test_usr:!:17013:0:99999:7:::
-vagrant@vagrant-ubuntu-trusty-64:~$ tail -1 /etc/group
-test_usr:x:1001:
-vagrant@vagrant-ubuntu-trusty-64:~$ sudo tail -1 /etc/gshadow
-test_usr:!::
-vagrant@vagrant-ubuntu-trusty-64:~$ 
+sudo useradd test_usr  -m   //添加用户test_usr
+tail -1 /etc/passwd       //查看文件最后一行
+sudo tail -1 /etc/shadow
+tail -1 /etc/group
+sudo tail -1 /etc/gshadow
+passwd test_user
 ````
 
 ### 2.3.2  passwd
@@ -107,6 +103,8 @@ vagrant@vagrant-ubuntu-trusty-64:~$
 
 ### 2.3.3 usermod
 ````
+sudo usermod -a -G sudo test_usr
+
 例：修改用户test_usr的UID
 vagrant@vagrant-ubuntu-trusty-64:~$ id test_usr               
 uid=1001(test_usr) gid=1001(test_usr) groups=1001(test_usr)
