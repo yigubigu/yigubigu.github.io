@@ -35,3 +35,7 @@ Note: '%' means any machine
 mysqldump -u root -p[root_password] [database_name] > dumpfilename.sql
 ##3.5 Restore
 mysql -u root -p[root_password] [database_name] < dumpfilename.sql
+
+
+##3.5 safe update 
+set SQL_SAFE_UPDATES = 0;
