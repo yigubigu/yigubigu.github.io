@@ -1,9 +1,9 @@
 ---
-date: 2017-06-19 09:50:47+00:00
+date: 2017-07-19 09:50:47+00:00
 layout: post
 title: 'Linux 网络配置'
 categories: 文档
-tags:  Linux, network
+tags:  Linux network
 ---
 
 #1 Ip Config
