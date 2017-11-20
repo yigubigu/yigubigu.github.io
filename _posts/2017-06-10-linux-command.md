@@ -2,7 +2,7 @@
 date: 2017-06-10 10:50:47+00:00
 layout: post
 title: 'Linux Commad'
-categories: 文档
+categories: 技术
 tags:  Linux Command
 ---
 
