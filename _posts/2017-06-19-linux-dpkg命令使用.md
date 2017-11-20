@@ -1,3 +1,12 @@
+
+---
+date: 2017-06-19 09:50:47+00:00
+layout: post
+title: 'dpkg'
+categories: 技术
+tags:  Linux
+---
+
 dpkg命令使用
 
 # 1.简介

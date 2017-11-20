@@ -2,8 +2,8 @@
 date: 2017-09-28 09:50:47+00:00
 layout: post
 title: 'linux swap'
-categories: 文档
-tags:  linux, swap
+categories: 技术
+tags:  linux swap
 ---
 [Linux Swap](https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-ubuntu-14-04)
 

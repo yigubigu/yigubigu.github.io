@@ -2,7 +2,7 @@
 date: 2017-08-10 21:50:47+00:00
 layout: post
 title: 'git rebase'
-categories: 文档
+categories: 技术
 tags:  git rebase
 ---
 

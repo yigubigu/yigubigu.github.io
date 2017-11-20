@@ -3,7 +3,7 @@
 date: 2017-08-16 09:50:47+00:00
 layout: post
 title: 'machine learning Gradient Descent'
-categories: 文档
+categories: 技术
 tags:  'machine learning'
 ---
 
