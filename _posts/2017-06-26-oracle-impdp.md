@@ -2,7 +2,7 @@
 date: 2017-06-26 09:50:47+00:00
 layout: post
 title: 'Oracle 导入'
-categories: 文档
+categories: 技术
 tags:  'Oracle 导入'
 ---
 #1 问题

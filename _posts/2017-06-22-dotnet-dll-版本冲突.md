@@ -2,7 +2,7 @@
 date: 2017-06-21 09:50:47+00:00
 layout: post
 title: '.net解决程序集版本冲突的方法'
-categories: 文档
+categories: 技术
 tags:  'dll版本'
 ---
 

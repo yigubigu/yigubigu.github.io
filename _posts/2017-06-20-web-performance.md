@@ -2,7 +2,7 @@
 date: 2017-06-19 09:50:47+00:00
 layout: post
 title: 'Web Performance Best Practices and Rules  '
-categories: 文档
+categories: 技术
 tags:  Web
 ---
 
