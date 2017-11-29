@@ -188,6 +188,8 @@ w
 #3.3.4 users 查看用户帐号详细信息
 
 
-
+#3.4 su 改变用户
+sudo useradd lory2 -m
+su - lory2
 
 
