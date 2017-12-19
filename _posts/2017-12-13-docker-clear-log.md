@@ -6,5 +6,6 @@ categories: 技术
 tags:  elk logstash
 ---
 
+```
 sudo sh -c "truncate -s 0 /var/lib/docker/containers/*/*-json.log"
-
+```
