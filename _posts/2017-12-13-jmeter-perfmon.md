@@ -6,5 +6,21 @@ categories: 技术
 tags:  jmeter
 ---
 
-# 1. Down
+# 1. Download Zip
 
+ ServerAgent-2.2.1.zip, unzip
+ 
+ Make sure java is installed
+ 
+# 2. start Agent 
+
+```
+./startAgent.sh --udp-port 0 --tcp-port 3450
+
+```
+
+Put to backgroud
+```
+ctrl + Z
+bg
+```
