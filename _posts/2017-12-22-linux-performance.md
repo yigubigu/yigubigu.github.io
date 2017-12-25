@@ -19,4 +19,6 @@ sudo sysctl -w net.ipv4.tcp_max_syn_backlog=10240
 
 net.core.somaxconn
 
-# 3. 
+# 3. sysctl parameter
+
+![](../assets/linux-performance-1.jpg)
