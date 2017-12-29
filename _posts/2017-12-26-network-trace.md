@@ -1,15 +1,14 @@
+
 ---
 date: 2017-12-22 09:50:47+00:00
 layout: post
-title: 'Chrome'
+title: 'Network'
 categories: 技术
-tags:  Chrome plugin
+tags:  Network 
 ---
 
-Pakcage Plugin 
+Network Trace
 
 * Find the plugin folder
-[Plugin Folder](https://www.addictivetips.com/web/how-to-find-the-user-folder-for-a-specific-chrome-profile/)
+[network performance](https://help.aliyun.com/knowledge_detail/40573.htm)
 
-* Pakcage
-[Package](https://developer.chrome.com/extensions/packaging)
