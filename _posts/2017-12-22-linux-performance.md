@@ -27,6 +27,9 @@ username|@groupname   type  resource  limit
 nofile - 打开文件的最大数目
 noproc - 进程的最大数目
 
+
+![](../assets/ulimit.png)
+
 ## 1.3 ulimit 命令
 ulimit命令用来限制系统用户对shell资源的访问
 
