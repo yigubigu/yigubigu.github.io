@@ -21,4 +21,19 @@ net.core.somaxconn
 
 # 3. sysctl parameter
 
+```
+sudo sysctl -w net.ipv4.tcp_max_syn_backlog=10240
+sudo sysctl -w net.ipv4.tcp_max_tw_buckets=10000
+sudo sysctl -w net.core.somaxconn=10000
+sudo sysctl -w net.ipv4.tcp_mem='94500000 915000000 927000000'
+sudo sysctl -w net.core.rmem_max=8388608
+sudo sysctl -w net.core.wmem_max=8388608
+sudo sysctl -w net.core.rmem_default=65536
+sudo sysctl -w net.core.wmem_default=65536
+sudo sysctl -w net.ipv4.tcp_rmem='4096 87380 8388608'
+sudo sysctl -w net.ipv4.tcp_wmem='4096 65536 8388608'
+sudo sysctl -w net.ipv4.tcp_mem='8388608 8388608 8388608'
+sudo sysctl -w net.ipv4.route.flush=1
+```
+
 ![](../assets/linux-performance-1.jpg)
