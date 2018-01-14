@@ -30,3 +30,8 @@ kubectl apply -f kubedns.yaml
 ```
 
 4、验证添加的自定义dns服务器是否在容器里生效，验证方法有很多种，可以通过在服务里使用dig或nslookup命令来看；也可以直接通过某个依赖于该自定义dns的应用服务来验证。
+
+```
+kubectl create -f busybox.yaml
+kubectl get pods busybox
+kubectl exec -ti busybox -- nslookup kubernetes.default
