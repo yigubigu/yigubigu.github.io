@@ -35,3 +35,4 @@ kubectl apply -f kubedns.yaml
 kubectl create -f busybox.yaml
 kubectl get pods busybox
 kubectl exec -ti busybox -- nslookup kubernetes.default
+```
