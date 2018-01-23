@@ -10,9 +10,12 @@ tags:  Linux Performance
 # 1 limit.conf
 
 # 1.1 limits.conf工作原理
+ulimit设置当前shell以及由它启动的进程的资源限制。
+
 limits.conf是pam_limits.so的配置文件，然后/etc/pam.d/下的应用程序调用pam_***.so模块。譬如说，当用户访问服务器，服务程序将请求发送到PAM模块，PAM模块根据服务名称在/etc/pam.d目录下选择一个对应的服务文件，然后根据服务文件的内容选择具体的PAM模块进行处理。
 
-# 1.2 limits.conf文件格式
+# 1.2 /ect/security/limits.conf文件格式
+
 ```
 username|@groupname   type  resource  limit 
 ```
@@ -27,14 +30,14 @@ username|@groupname   type  resource  limit
 nofile - 打开文件的最大数目
 noproc - 进程的最大数目
 
-
-![](../assets/ulimit.png)
-
 ## 1.3 ulimit 命令
 ulimit命令用来限制系统用户对shell资源的访问
 
+```
+ulimit -a
+```
 
-
+![](../assets/ulimit.png)
  
 # 2 sysctl.conf
 ≈
@@ -44,7 +47,31 @@ ulimit命令用来限制系统用户对shell资源的访问
 使用命令“/sbin/sysctl –p”使之立即生效
 
 
-## 2.2 常见参数 sysctl parameter
+## 2.2 sysctl命令
+
+sysctl命令被用于在内核运行时动态地修改内核的运行参数，可用的内核参数在目录/proc/sys中。它包含一些TCP/IP堆栈和虚拟内存系统的高级选项， 这可以让有经验的管理员提高引人注目的系统性能。用sysctl可以读取设置超过五百个系统变量。
+
+显示所有变量
+
+```
+sysctl -a 
+sysctl -a | grep memory
+```
+
+显示变量的值 
+
+```
+sysctl -n kernel.hostname
+```
+
+设置变量
+```
+sysctl -w variable=value
+
+```
+
+
+## 2.3 常见参数 sysctl parameter
 
 ```
 sudo sysctl -w net.ipv4.tcp_max_syn_backlog=10240
@@ -59,9 +86,5 @@ sudo sysctl -w net.ipv4.tcp_rmem='4096 87380 8388608'
 sudo sysctl -w net.ipv4.tcp_wmem='4096 65536 8388608'
 sudo sysctl -w net.ipv4.tcp_mem='8388608 8388608 8388608'
 sudo sysctl -w net.ipv4.route.flush=1
+sudo sysctl -w fs.file-max=34166
 ```
-
-## 2.3 sysctl命令
-
-sysctl命令被用于在内核运行时动态地修改内核的运行参数，可用的内核参数在目录/proc/sys中。它包含一些TCP/IP堆栈和虚拟内存系统的高级选项， 这可以让有经验的管理员提高引人注目的系统性能。用sysctl可以读取设置超过五百个系统变量。
-
