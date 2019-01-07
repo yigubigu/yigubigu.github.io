@@ -1,3 +1,11 @@
+---
+date: 2019-01-07 09:50:47+00:00
+layout: post
+title: 'mac os'
+categories: 技术 
+tags:  python
+---
+
 pyenv zlib error on MacOS:
 
 On Mojave, after installing Xcode command line tools, had to run the following:
