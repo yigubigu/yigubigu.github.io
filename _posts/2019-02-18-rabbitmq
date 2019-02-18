@@ -1,0 +1,16 @@
+---
+date: 2019-01-07 09:50:47+00:00
+layout: post
+title: 'rabbitmq windows'
+categories: 技术 
+tags:  rabitmq
+---
+
+The rabbitmq config file is under C:\Users\Administrator\AppData\Roaming\RabbitMQ\advanced.config
+
+The content example:
+[
+  {rabbit, [
+    {tcp_listeners, [{"::",       7001}]}
+  ]}
+].
