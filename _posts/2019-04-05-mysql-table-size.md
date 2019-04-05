@@ -1,9 +1,9 @@
 ---
-date: 2019-03-21 09:50:47+00:00
+date: 2019-04-05 09:50:47+00:00
 layout: post
-title: 'Zoo Keeper'
+title: 'mysql'
 categories: 技术 
-tags:  zookeeper 
+tags:  mysql 
 ---
 
 SELECT CONCAT(table_schema, '.', table_name),
