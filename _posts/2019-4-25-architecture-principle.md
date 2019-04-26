@@ -41,3 +41,10 @@ In a monolithic application, we can apply the single responsibility principle at
 When this principle is applied to application architecture, and taken to its logical endpoint, you get microservices. A given microservice should have a single responsibility. If you need to extend the behavior of a system, it's usually better to do it by adding additional microservices, rather than by adding responsibility to an existing one.
 
 
+# 6 Don't repeat yourself (DRY)
+
+The application should avoid specifying behavior related to a particular concept in multiple places as this is a frequent source of errors. At some point, a change in requirements will require changing this behavior and the likelihood that at least one instance of the behavior will fail to be updated will result in inconsistent behavior of the system.
+
+Rather than duplicating logic, encapsulate it in a programming construct. Make this construct the single authority over this behavior, and have any other part of the application that requires this behavior use the new construct.
+
+For more java design patterns [java patterns ](https://java-design-patterns.com/principles/)
