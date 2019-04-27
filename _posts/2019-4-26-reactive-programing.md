@@ -3,7 +3,7 @@ date: 2019-4-26 18:50:47+00:00
 layout: post
 title: 响应式编程之道
 categories: Tech
-tags:  architecture
+tags:  architecture reactive
 ---
 
 #  什么是响应式编程？
