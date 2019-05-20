@@ -235,3 +235,19 @@ StepVerifier.create(
 2. 对每个元素延迟100ms；
 3. 对每个元素进行打印（注doOnNext方法是“偷窥式”的方法，不会消费数据流）；
 4. 验证是否发出了8个元素。
+
+打印结果为mfolnuox，原因在于各个拆分后的小字符串都是间隔100ms发出的，因此会交叉。
+
+flatMap通常用于每个元素又会引入数据流的情况，比如我们有一串url数据流，需要请求每个url并收集response数据。假设响应式的请求方法如下：
+
+```
+Mono<HttpResponse> requestUrl(String url) {...}
+```
+而url数据流为一个Flux<String> urlFlux，那么为了得到所有的HttpResponse，就需要用到flatMap：
+
+```
+urlFlux.flatMap(url -> requestUrl(url));
+
+```
+其返回内容为Flux<HttpResponse>类型的HttpResponse流。
+
