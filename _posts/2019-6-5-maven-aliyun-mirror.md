@@ -6,125 +6,26 @@ categories: maven
 tags:  maven
 ---
 
-Copy content to settings.xml to ~\.m2\
+#1 Linux 配置镜像加速器
+
+针对Docker客户端版本大于 1.10.0 的用户
+
+您可以通过修改daemon配置文件/etc/docker/daemon.json来使用加速器
 
 ```
-<?xml version="1.0" encoding="UTF-8"?>
-
-
-<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
-  <!-- localRepository
-   | The path to the local repository maven will use to store artifacts.
-   |
-   | Default: ${user.home}/.m2/repository
-  <localRepository>/path/to/local/repo</localRepository>
-  -->
-
-  <!-- interactiveMode
-   | This will determine whether maven prompts you when it needs input. If set to false,
-   | maven will use a sensible default value, perhaps based on some other setting, for
-   | the parameter in question.
-   |
-   | Default: true
-  <interactiveMode>true</interactiveMode>
-  -->
-
-  <!-- offline
-   | Determines whether maven should attempt to connect to the network when executing a build.
-   | This will have an effect on artifact downloads, artifact deployment, and others.
-   |
-   | Default: false
-  <offline>false</offline>
-  -->
-
-  <!-- pluginGroups
-   | This is a list of additional group identifiers that will be searched when resolving plugins by their prefix, i.e.
-   | when invoking a command line like "mvn prefix:goal". Maven will automatically add the group identifiers
-   | "org.apache.maven.plugins" and "org.codehaus.mojo" if these are not already contained in the list.
-   |-->
-  <pluginGroups>
-    <!-- pluginGroup
-     | Specifies a further group identifier to use for plugin lookup.
-    <pluginGroup>com.your.plugins</pluginGroup>
-    -->
-  </pluginGroups>
-
-  <!-- proxies
-   | This is a list of proxies which can be used on this machine to connect to the network.
-   | Unless otherwise specified (by system property or command-line switch), the first proxy
-   | specification in this list marked as active will be used.
-   |-->
-  <proxies>
-    <!-- proxy
-     | Specification for one proxy, to be used in connecting to the network.
-     |
-    <proxy>
-      <id>optional</id>
-      <active>true</active>
-      <protocol>http</protocol>
-      <username>proxyuser</username>
-      <password>proxypass</password>
-      <host>proxy.host.net</host>
-      <port>80</port>
-      <nonProxyHosts>local.net|some.host.com</nonProxyHosts>
-    </proxy>
-    -->
-  </proxies>
-
-  <!-- servers
-   | This is a list of authentication profiles, keyed by the server-id used within the system.
-   | Authentication profiles can be used whenever maven must make a connection to a remote server.
-   |-->
-  <servers>
-    <!-- server
-     | Specifies the authentication information to use when connecting to a particular server, identified by
-     | a unique name within the system (referred to by the 'id' attribute below).
-     |
-     | NOTE: You should either specify username/password OR privateKey/passphrase, since these pairings are
-     |       used together.
-     |
-    <server>
-      <id>deploymentRepo</id>
-      <username>repouser</username>
-      <password>repopwd</password>
-    </server>
-    -->
-
-    <!-- Another sample, using keys to authenticate.
-    <server>
-      <id>siteServer</id>
-      <privateKey>/path/to/private/key</privateKey>
-      <passphrase>optional; leave empty if not used.</passphrase>
-    </server>
-    -->
-  </servers>
-
-  
-  <mirrors>    
-	 <mirror>
-      <id>alimaven</id>
-      <name>aliyun maven</name>
-      <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-      <mirrorOf>central</mirrorOf>        
-    </mirror>
-  </mirrors>
-
-  
-  <profiles>
-    
-
-  </profiles>
-
-  <!-- activeProfiles
-   | List of profiles that are active for all builds.
-   |
-  <activeProfiles>
-    <activeProfile>alwaysActiveProfile</activeProfile>
-    <activeProfile>anotherAlwaysActiveProfile</activeProfile>
-  </activeProfiles>
-  -->
-</settings>
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://sc9jx4el.mirror.aliyuncs.com"]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
 
 ```
+
+#2 Mac 配置镜像加速器
+针对安装了Docker for Mac的用户，您可以参考以下配置步骤：
+右键点击桌面顶栏的 docker 图标，选择 Preferences ，在 Daemon 标签（Docker 17.03 之前版本为 Advanced 标签）下的 Registry mirrors 列表中将
+
+https://sc9jx4el.mirror.aliyuncs.com加到"registry-mirrors"的数组里，点击 Apply & Restart按钮，等待Docker重启并应用配置的镜像加速器。
