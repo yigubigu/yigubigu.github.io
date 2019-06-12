@@ -29,3 +29,20 @@ Control Panel -> System and Security -> Windows update
 ## Update Esxi config
 
 Update the virtual machine name to attach IP.
+
+
+## Check remote computer name by IP
+```
+nbtstat -a 192.168.109.104
+```
+
+## Check network 
+```
+tracert 192.168.109.104
+```
+
+## Check remote computer ip by name 
+```
+nslookup qa-wp-web
+ping -4 qa-wp-app
+```
