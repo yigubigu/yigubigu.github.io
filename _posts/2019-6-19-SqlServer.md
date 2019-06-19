@@ -17,3 +17,8 @@ SQLCMD -S localhost -U sa -P sa -Q "RESTORE DATABASE newDbName FROM disk='e:\sql
 ```
 SELECT 'dbcc CHECKIDENT(['+ table_name +'], reseed);'FROM information_schema.tables WHERE table_type = 'base table'
 ```
+
+# Script sqlserver
+```
+mssql-scripter -S dev1-wp-genDb -U sa -P sa -d dbName --exclude-use-database  --exclude-headers> 1.sql
+```
