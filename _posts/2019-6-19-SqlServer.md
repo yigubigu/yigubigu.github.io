@@ -11,3 +11,9 @@ tags:  sqlserver
 ```
 SQLCMD -S localhost -U sa -P sa -Q "RESTORE DATABASE newDbName FROM disk='e:\sqlserver-backup\backupFileName.bak' WITH RECOVERY, MOVE 'OriginDbName' TO 'e:\sqlserver-data\newDbName.mdf', MOVE 'OriginDbName_Log' TO 'e:\sqlserver-data\newDbName.ldf'"
 ```
+
+
+# Table Name
+```
+SELECT 'dbcc CHECKIDENT(['+ table_name +'], reseed);'FROM information_schema.tables WHERE table_type = 'base table'
+```
