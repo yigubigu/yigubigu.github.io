@@ -6,6 +6,22 @@ categories: virtual machine
 tags:  windows 
 ---
 
+# Create new virtual machine
+## Create new virtual machine
+ Do not specify disk
+
+## Copy base image to new virtual machine
+Copy from browser 
+
+## Attach the copied file to new virutla machine 
+Change configuration from UI to attach existing disk 
+
+## Run systemprepare command
+go to command line
+go to c:\windows\system32\sysprep, and execute sysprep.exe
+
+[Sysprep](https://www.sysgeek.cn/windows-10-sysprep/)
+
 # Control Panel
 
 ## Enable remote access
@@ -45,4 +61,10 @@ tracert 192.168.109.104
 ```
 nslookup qa-wp-web
 ping -4 qa-wp-app
+```
+
+## Firwaall
+
+```
+New-NetFirewallRule -Protocol TCP -LocalPort 22 -Direction Inbound -Action Allow -DisplayName SSH
 ```
