@@ -55,6 +55,9 @@ server {
             index  index.html index.htm;
         }
         location /bw {
+            location ~.log {
+				add_header Content-Type text/plain;
+			}
             alias   C:\\tibco\\tra\\domain\\WynnQAWP\\application\\logs;
 			autoindex on;
             index  index.html index.htm;
@@ -68,7 +71,7 @@ server {
 
 ## Install Nginx as Windows Service
 
-- 1. nssm.exe install nginx
+- 1. Go to ommand line, run  "nssm.exe install nginx"
 - 2. In NSSM gui do the following:
 - 3. On the application tab: set path to C:\mysoftware\nginx-1.15.8\nginx.exe, set startup directory to C:\mysoftware\nginx-1.15.8
 - 4. On the I/O tab type "start nginx" on the Input slow. Optionally set C:\mysoftware\nginx-1.15.8\logs\service.out.log and C:\mysoftware\nginx-1.15.8\logs\service.err.log in the output and error slots
