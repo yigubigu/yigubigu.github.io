@@ -8,3 +8,9 @@ tags:  nodejs
 ---
 
 [install nodejs](http://www.hostingadvice.com/how-to/install-nodejs-ubuntu-14-04/#node-version-manager)
+
+* mac install Node
+```
+brew install node
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+```
