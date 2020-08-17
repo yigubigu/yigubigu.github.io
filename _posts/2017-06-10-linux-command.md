@@ -69,3 +69,21 @@ netstat -tunlp | grep 端口号
 - -p 显示建立相关链接的程序名
 
 
+# 6. Search text content
+```
+find . -name "*.c" -print | xargs grep "main"
+```
+
+# 7. Seearch process
+
+```
+PID=$(ps -ef | grep tos.jar | grep -v grep | awk '{ print $2 }')
+if [ -z "$PID" ]
+then
+    echo Application is already stopped
+else
+    echo kill $PID
+    kill -9 $PID
+fi
+
+```
