@@ -87,3 +87,13 @@ else
 fi
 
 ```
+
+# 8 show process details
+
+```
+ps -p {pid} -lF
+```
+
+```
+/proc/{PID} 
+```
