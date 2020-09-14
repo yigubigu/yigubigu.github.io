@@ -97,3 +97,12 @@ ps -p {pid} -lF
 ```
 /proc/{PID} 
 ```
+
+#9 信息摘要
+
+```
+sha256sum file.zip > file.sha256
+
+sha256sum -c file.sha256  (注意：摘要的文件名与被校验的文件名要一致)
+
+```
